@@ -1,0 +1,65 @@
+- id: '1652249449824'
+  alias: Master Bedroom Lights Off
+  description: ''
+  trigger:
+  - device_id: 40b70140618314d66c724a9c6f351630
+    domain: hue
+    platform: device
+    type: initial_press
+    subtype: 4
+    unique_id: 44bc4bf2-04b6-462b-b9cc-c388c46f5b36
+  condition: []
+  action:
+  - type: turn_off
+    device_id: e4a286620ec3f54b5b39f11ed79acdb6
+    entity_id: light.master_bedroom
+    domain: light
+  mode: single
+- id: '1652249571351'
+  alias: Master Bedroom Lights On
+  description: ''
+  trigger:
+  - device_id: 40b70140618314d66c724a9c6f351630
+    domain: hue
+    platform: device
+    type: initial_press
+    subtype: 1
+    unique_id: 144e76fa-8c56-4e55-9efb-7ccfc6706799
+  condition: []
+  action:
+  - type: turn_on
+    device_id: e4a286620ec3f54b5b39f11ed79acdb6
+    entity_id: light.master_bedroom
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1652249727199'
+  alias: Start work
+  description: ''
+  trigger:
+  - platform: time
+    at: 08:30:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: d4ed132c83766ecbe5eddaf9f7630a75
+    entity_id: light.office
+    domain: light
+  mode: single
+- id: '1652311706567'
+  alias: Office Lights Off
+  description: ''
+  trigger:
+  - device_id: 824e480db306c5331833ffd1c8144184
+    domain: hue
+    platform: device
+    type: initial_press
+    subtype: 4
+    unique_id: 6177dcfe-9583-47bf-9da0-3f6f37a7a550
+  condition: []
+  action:
+  - type: turn_off
+    device_id: d4ed132c83766ecbe5eddaf9f7630a75
+    entity_id: light.office
+    domain: light
+  mode: single
